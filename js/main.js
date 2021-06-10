@@ -40,8 +40,25 @@ const searchStates =  searchText =>{
         })
     };
 
+//Debouncing
+var i=0;
+const debounce = (fun, delay) => {
+    let timer;
+    return function(){
+        const context = this
+        const args = arguments
+        clearTimeout(timer)
+        timer = setTimeout(() => {
+            fun.apply(context, args)
+            console.log(i++);
+        },delay)
+    }
+}
 
-
-search.addEventListener("input",function(){
-    searchStates(search.value);
-})
+search.addEventListener("input",
+debounce(function(){
+    searchStates(search.value)
+},400)
+   
+    
+);
