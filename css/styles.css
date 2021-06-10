@@ -30,6 +30,11 @@ body{
   margin-top:20px;
   font-size: 1.2rem;
   border-radius: 5px;
+  border: 3px solid #0774b3;
+}
+#search:focus{
+  outline-width: 3px;
+  outline-color: #0774b3;
 }
 .card{
   background-color: #424642;
@@ -49,12 +54,15 @@ body{
 }
 @media(max-width:760px){
   body{
-    font-size: 12px;
+    font-size: 13px;
   }
   .main{
     width:90%;
   }
   .card{
     text-align: left;
+  }
+  #search{
+    font-size: 1rem;
   }
 }
