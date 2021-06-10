@@ -41,7 +41,6 @@ const searchStates =  searchText =>{
     };
 
 //Debouncing
-var i=0;
 const debounce = (fun, delay) => {
     let timer;
     return function(){
@@ -50,7 +49,6 @@ const debounce = (fun, delay) => {
         clearTimeout(timer)
         timer = setTimeout(() => {
             fun.apply(context, args)
-            console.log(i++);
         },delay)
     }
 }
