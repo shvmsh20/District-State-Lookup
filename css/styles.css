@@ -33,8 +33,6 @@ body{
   border: 3px solid #0774b3;
 }
 #search:focus{
-  /* outline-width: 3px;
-  outline-color: #0774b3; */
   outline:none;
   box-shadow: 0 0 3pt 2pt #0774b3;
 }
